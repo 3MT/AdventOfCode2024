@@ -105,13 +105,13 @@ int main()
     RunPuzzle<Puzzle13>(13, "36954", "79352015273424");
     RunPuzzle<Puzzle14>(14, "229421808", "6577");
     RunPuzzle<Puzzle15>(15, "1490942", "1519202");
-    RunPuzzle<Puzzle16>(16, "123540", "665"); //todo: check answer
+    RunPuzzle<Puzzle16>(16, "123540", "665");
     RunPuzzle<Puzzle17>(17, "7,3,1,3,6,3,6,0,2", "105843716614554");
-    RunPuzzle<Puzzle18>(18, "324", "46,23"); //20 determined by manually looking at test data and seeing index 20 is the one that breaks it.
+    RunPuzzle<Puzzle18>(18, "324", "46,23");
     RunPuzzle<Puzzle19>(19, "276", "681226908011510");
-    RunPuzzle<Puzzle20>(20, "1518", "1032257"); //write tests
+    RunPuzzle<Puzzle20>(20, "1518", "1032257");
     RunPuzzle<Puzzle21>(21, "171596", "209268004868246");
-    RunPuzzle<Puzzle22>(22, "15303617151", "1727"); //todo: test cases
+    RunPuzzle<Puzzle22>(22, "15303617151", "1727"); 
     RunPuzzle<Puzzle23>(23, "1248", "aa,cf,cj,cv,dr,gj,iu,jh,oy,qr,xr,xy,zb");
     RunPuzzle<Puzzle24>(24, "51107420031718", "cpm,ghp,gpr,krs,nks,z10,z21,z33");
     RunPuzzle<Puzzle25>(25, "3439", "Merry Christmas!");

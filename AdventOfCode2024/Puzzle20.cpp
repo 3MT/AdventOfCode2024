@@ -41,7 +41,7 @@ std::string Puzzle20::SolvePuzzleA(const char* fileName)
             {
                 assert(width == line.size());
             }
-            for (int x = 0; x < width; x++)
+            for (size_t x = 0; x < width; x++)
             {
                 if (line[x] == c_Start)
                 {
@@ -154,7 +154,7 @@ std::string Puzzle20::SolvePuzzleB(const char* fileName)
             {
                 assert(width == line.size());
             }
-            for (int x = 0; x < width; x++)
+            for (size_t x = 0; x < width; x++)
             {
                 if (line[x] == c_Start)
                 {
@@ -221,9 +221,9 @@ std::string Puzzle20::SolvePuzzleB(const char* fileName)
     //the logic looks scary but basically we are just finding all paths that 'jump' to a part of the track that's closer to the goal than here, and store the time saved
     std::map<int64_t, int64_t> timeSaves;
     int64_t sub100Count = 0;
-    for (int x = 1; x < width - 1; x++)
+    for (size_t x = 1; x < width - 1; x++)
     {
-        for (int y = 1; y < height - 1; y++)
+        for (size_t y = 1; y < height - 1; y++)
         {
             if (map[y][x] == c_Floor)
             {

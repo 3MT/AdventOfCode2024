@@ -8,7 +8,7 @@ public:
 	class PageRule
 	{
 	private:
-		int left, right;
+		int64_t left, right;
 	public:
 		PageRule(int64_t l, int64_t r)
 		{

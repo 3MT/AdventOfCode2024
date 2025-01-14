@@ -56,7 +56,7 @@ std::string Puzzle18::SolvePuzzleA(const char* fileName)
 
 	//flood fill distances.
 	std::vector<std::vector<int64_t>> distances;
-	for (int y = 0; y < height; y++)
+	for (int64_t y = 0; y < height; y++)
 	{
 		std::vector<int64_t> line;
 		line.resize(width, c_Unreachable);

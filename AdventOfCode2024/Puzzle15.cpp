@@ -32,9 +32,9 @@ std::string Puzzle15::SolvePuzzleA(const char* fileName)
     std::vector<std::vector<char>> tiles = ParseGrid(myFile);
     std::string commands = ParseRobotCommands(myFile);
     Coord robotPosition;
-    for (int x = 0; x < tiles[0].size(); x++)
+    for (size_t x = 0; x < tiles[0].size(); x++)
     {
-        for (int y = 0; y < tiles.size(); y++)
+        for (size_t y = 0; y < tiles.size(); y++)
         {
             if (tiles[y][x] == c_ROBOT)
             {
@@ -45,7 +45,7 @@ std::string Puzzle15::SolvePuzzleA(const char* fileName)
         }
     }
 
-    for (int i = 0; i < commands.size(); i++)
+    for (size_t i = 0; i < commands.size(); i++)
     {
         switch (commands[i])
         {
@@ -106,9 +106,9 @@ std::string Puzzle15::SolvePuzzleB(const char* fileName)
     std::vector<std::vector<char>> tiles = ParseWideGrid(myFile);
     std::string commands = ParseRobotCommands(myFile);
     Coord robotPosition;
-    for (int x = 0; x < tiles[0].size(); x++)
+    for (size_t x = 0; x < tiles[0].size(); x++)
     {
-        for (int y = 0; y < tiles.size(); y++)
+        for (size_t y = 0; y < tiles.size(); y++)
         {
             if (tiles[y][x] == c_ROBOT)
             {
@@ -119,7 +119,7 @@ std::string Puzzle15::SolvePuzzleB(const char* fileName)
         }
     }
 
-    for (int i = 0; i < commands.size(); i++)
+    for (size_t i = 0; i < commands.size(); i++)
     {
         switch (commands[i])
         {
@@ -329,9 +329,9 @@ bool Puzzle15::TryWideRobotMove(Coord start, Coord direction, std::vector<std::v
 int64_t Puzzle15::SumGPS(const std::vector<std::vector<char>>& map)
 {
     int64_t sum = 0;
-    for (int x = 0; x < map[0].size(); x++)
+    for (size_t x = 0; x < map[0].size(); x++)
     {
-        for (int y = 0; y < map.size(); y++)
+        for (size_t y = 0; y < map.size(); y++)
         {
             if (map[y][x] == c_CRATE)
             {
@@ -349,8 +349,8 @@ int64_t Puzzle15::SumGPS(const std::vector<std::vector<char>>& map)
 std::vector<std::vector<char>> Puzzle15::ParseGrid(std::ifstream& file)
 {
     std::vector<std::vector<char>> tiles;
-    int width = 0;
-    int height = 0;
+    size_t width = 0;
+    size_t height = 0;
     if (file.is_open())
     {
         std::string line;
